@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav {
+  height: 8vh;
+  background-color: rgb(53, 53, 53);
+  color: white;
+  display: flex;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+}
+
+nav h3 {
+  margin-left: 20px;
+}
+
+nav img {
+  position: absolute;
+  left: 10vw;
+  top: 5vh;
+  height: 8vh;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  margin-left: auto;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.landing {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+.landing h3 {
+  margin: 1rem;  
+  font-family: 'Indie Flower', cursive;
+  font-size: 20px;
+  border-bottom: rgb(186, 138, 201) 2px solid;
+}
+
+.shortIntro {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 5vh;
+}
+.landing h1 {
+  font-size: 30px;
+  font-family:'Courier New', Courier, monospace;
+}
+
+.landing img {
+  height: 200px;
+  width: 200px;
+}
+
+.connect {
+  width: 150px;
+  height: 40px;
+  display: flex;
+  background-color: rgb(53, 53, 53);
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vh;
+  border-radius: 5%;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.connect a {
+  color: white;
+  text-decoration: none;
+}
+.img65 {
+ width: 100%;
+}
+.img35 {
+  width: 100%;
+}
+
+.img100 {
+  width: 100%;
+}
+.row-one {
+  margin-top: 6vh;
+  height: 200px;
+  display: grid;
+  grid-template-columns: 65% 1fr;
+}
+.row-two {
+  height: 26vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 200px;
+}
+.row-three {
+  height: 20vh;
+  display: grid;
+  grid-template-columns: 65% 1fr;
+  overflow: hidden;
+}
+.row-four {
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 65% 1fr;
+}
+@media screen and (max-width: 768px) {
+  .line {
+    width: 30px;
+    height: 3px;
+    background-color: rgb(248, 248, 248);
+    margin: 5px;
+    border-radius: 20%;
+    margin: 7px;
+  }
+
+  nav {
+    position: relative;
+  }
+
+  .hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2
+  }
+  
+  .nav-links {
+    position: fixed;
+    background: rgb(53, 53, 53);
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(100px at 100%  -15%);
+    -webkit-clip-path: circle(100px at 100%  -15%);
+    transition: all 1s ease-out;
+  }
+
+  .nav-links.open {
+    clip-path: circle(1400px at 100%  -15%);
+    -webkit-clip-path: circle(1400px at 100%  -15%);
+    padding: none;
+  }
+}
+
+@media (min-width: 1000px) {
+  .landing {
+    padding-top: 5vh;
+  }
+}
